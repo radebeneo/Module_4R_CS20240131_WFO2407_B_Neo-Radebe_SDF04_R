@@ -15,10 +15,12 @@ body {
     background-image: repeating-linear-gradient(45deg, #f74545 25%, transparent 25%, transparent 75%, #f74545 75%, #f74545), repeating-linear-gradient(45deg, #f74545 25%, #e5e5f7 25%, #e5e5f7 75%, #f74545 75%, #f74545);
     background-position: 0 0, 10px 10px;
     background-size: 20px 20px;
-    padding: 80px;
+    padding: 20px;
     border-radius: 10px;
     width: 80%;
-    position: relative; 
+    display: flex; /* Use flexbox to arrange the pastries in a line */
+    justify-content: space-around; /* Place the pastries evenly apart */
+    align-items: center; /* Place the pastries vertically in the centre */ 
   }
   
   .pastry {
@@ -26,7 +28,10 @@ body {
     padding: 20px;
     border-radius: 50%;
     font-size: 18px;
-    position: absolute; 
+    /* removed absolute position, added a flexbox property to center the images within each pastry div. */
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .pastry img {
